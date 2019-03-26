@@ -30,7 +30,6 @@ class WeatherObject:
         weatherDict['pressure'] = self.pressure
         return weatherDict
 
-#converts weather data to dictionary test
 def __weatherObject(weather):
     currWeather = WeatherObject()
     if(weather is None):
@@ -51,7 +50,6 @@ def __weatherObject(weather):
 
     return currWeather
 
-#gets url from xml test
 def __getURLXML(url):
     try:
         file = urlopen(url)
@@ -61,7 +59,6 @@ def __getURLXML(url):
     except urllib.error.HTTPError:
         print('ERROR: Either the website is down or you have a bad API key')
 
-#input zip code and get weather data
 def getWeatherZip(zipcode, units='metric'):
     url = 'http://api.openweathermap.org/data/2.5/weather?zip=' + zipcode + ',us&units=' + units + '&mode=xml&APPID=' + apikey
     print(url)
@@ -74,7 +71,6 @@ def getWeatherID(id, units='metric'):
     xml = __getURLXML(url)
     return __weatherObject(xml)
 
-#input coords and get weather data
 def getWeatherCoords(lat, lon, units='metric'):
     url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&units=' + units + '&mode=xml&APPID=' + apikey
     print(url)
