@@ -30,7 +30,7 @@ class WeatherObject:
         weatherDict['pressure'] = self.pressure
         return weatherDict
 
-#converts weather data to dictionary
+#converts weather data to dictionary test
 def __weatherObject(weather):
     currWeather = WeatherObject()
     if(weather is None):
