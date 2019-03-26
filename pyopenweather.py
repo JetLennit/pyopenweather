@@ -2,7 +2,7 @@ import xml.etree.ElementTree as ET
 from urllib.request import urlopen
 import urllib
 
-apikey = ''
+apikey = ' '
 
 class WeatherObject:
     temp = ''
