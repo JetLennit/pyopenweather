@@ -51,7 +51,7 @@ def __weatherObject(weather):
 
     return currWeather
 
-#gets url from xml
+#gets url from xml test
 def __getURLXML(url):
     try:
         file = urlopen(url)
