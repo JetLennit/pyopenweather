@@ -61,18 +61,15 @@ def __getURLXML(url):
 
 def getWeatherZip(zipcode, units='metric'):
     url = 'http://api.openweathermap.org/data/2.5/weather?zip=' + zipcode + ',us&units=' + units + '&mode=xml&APPID=' + apikey
-    print(url)
     xml = __getURLXML(url)
     return __weatherObject(xml)
 
 def getWeatherID(id, units='metric'):
     url = 'http://api.openweathermap.org/data/2.5/weather?id=' + id + '&units=' + units + '&mode=xml&APPID=' + apikey
-    print(url)
     xml = __getURLXML(url)
     return __weatherObject(xml)
 
 def getWeatherCoords(lat, lon, units='metric'):
     url = 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + lon + '&units=' + units + '&mode=xml&APPID=' + apikey
-    print(url)
     xml = __getURLXML(url)
     return __weatherObject(xml)

@@ -1,7 +1,10 @@
 # PyOpenWeather
 This is a module that allows for easier interfacing with the [Open Weather Map API](https://openweathermap.org/api) 
 
-## pyopenweather.getWeatherZip(zip, [format])
+## pyopenweather.apikey
+A string that must be set to the API key provided by the Open Weather Map website
+
+## pyopenweather.getWeatherZip(zip, [format]):
 ```python
 print(pyopenweather.getWeatherZip('90001', 'imperial').temp)
 ```
@@ -11,7 +14,7 @@ The zip code of the location you want to get data for
 ### *(str)* format (optional):
 The format you want the data in (imperial, metric, or kelvin). The default is metric
 
-## pyopenweather.getWeatherCoords(lat, lon, [format])
+## pyopenweather.getWeatherCoords(lat, lon, [format]):
 ```python
 print(pyopenweather.getWeatherCoords('36.7783', '119.4179', 'kelvin').sunset)
 ```
@@ -23,7 +26,7 @@ The longitude of the location you want to get data for
 ### *(str)* format (optional):
 The format you want the data in (imperial, metric, or kelvin). The default is metric
 
-## pyopenweather.getWeatherID(id, [format])
+## pyopenweather.getWeatherID(id, [format]):
 ```python
 print(pyopenweather.getWeatherID('2172797').humidity)
 ```
@@ -33,7 +36,7 @@ The ID of the location you want to get data for. IDs can be found [here](http://
 ### *(str)* format (optional):
 The format you want the data in (imperial, metric, or kelvin). The default is metric
 
-## pyopenweather.WeatherObject
+## pyopenweather.WeatherObject:
 Returns an object with the following
 ### *(str)* temp:
 The current temperature at the location provided
@@ -57,3 +60,12 @@ A brief description of the current weather at the location provided
 The air pressure in hPa
 ### *(function)* getDict():
 Returns a dict with all the same labels listed previously, if you want that sorta thing
+
+## Example:
+```python
+import pyopenweather
+
+pyopenweather.apikey = '(api key)'
+weather = pyopenweather.getWeatherCoords('34.0522', '-118.2437', 'imperial')
+print('The current weather is ' + weather.temp + ' in ' + weather.cityname)
+```
