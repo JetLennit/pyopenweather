@@ -1,5 +1,5 @@
 # PyOpenWeather
-This is a module that allows for easier interfacing with the [Open Weather Map API](https://openweathermap.org/api) 
+This is a module that allows for easier interfacing with the [Open Weather Map API](https://openweathermap.org/api). Don't use this, use [this one](https://github.com/csparpa/pyowm) instead.
 
 ## pyopenweather.apikey
 A string that must be set to the API key provided by the Open Weather Map website
